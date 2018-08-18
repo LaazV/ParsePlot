@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="plotly-latest.min.js"></script>
+  <script> 
+    x = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth,
+    y = window.innerHeight|| document.documentElement.clientHeight|| document.getElementsByTagName('body')[0].clientHeight;
+  </script>
+</head>
+
+<body>
+  <div id="graph" style="width: 1400px; height: 800px;"></div>
+  <script> 
+ 	var grafico = document.getElementById("graph");
+        grafico.style.width = x;
+        grafico.style.height = y;
+  </script>
+  <script src="custom.js"></script>
+</body>
+</html>
