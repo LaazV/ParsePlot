@@ -30,4 +30,8 @@ OR
 
 ## Compiling
 
+Install pyinstaller
+
+```pip install pyinstaller```
+
 ```"\path\to\python\files\pyinstaller-script.py" parse.py```
