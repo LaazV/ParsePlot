@@ -1,7 +1,7 @@
 # Latest Release
 Latest release is pre-release v0.1
 
-[Releases Page](github.com/LaazV/ParsePlot/Releases)
+[Releases Page](http://github.com/LaazV/ParsePlot/Releases)
 
 # Usage
 
