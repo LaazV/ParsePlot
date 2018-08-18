@@ -28,6 +28,6 @@ OR
 - Open "index.html".
 
 
-## to Compile
+## Compiling
 
-
+```"\path\to\python\files\pyinstaller-script.py" parse.py```
