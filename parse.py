@@ -15,8 +15,8 @@ def main():
 		file = sys.argv[1]
 	except (IndexError) as e:
 		print("Error Opening File. Aborting")
-		file = 'data.txt'
-		#abort()
+		#file = 'data.txt'
+		abort()
 
 	if(filterData(file)):
 		print("Converting JulianDate to Standart DateTime", end="", flush=True)
@@ -24,7 +24,6 @@ def main():
 			print(" ..................... [SUCCESS]")
 		else:
 			print(" ..................... [FAIL]")
-		
 
 		print("Savind to file", end="", flush=True)
 
@@ -78,15 +77,13 @@ def main():
 
 	else:
 		print("ERROR: X and Y vertices are different sizes")
-
 	a=input()
 
 def filterData(file):
 	print("Opening file", end="", flush=True)
 	pattern = "(\d{1,10}\.\d{1,10}) ; (\d{1,10}\.\d{1,10}).+;.+.+ (\d{1}\.\d{2}) ; "
-
 	file = open(file)
-
+	
 	with file as f:
 		for line in f:
 			regex = re.match(pattern, line)
