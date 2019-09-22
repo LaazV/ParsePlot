@@ -19,7 +19,7 @@ def main():
 		abort()
 
 	if(filterData(file)):
-		print("Converting JulianDate to Standart DateTime", end="", flush=True)
+		print("Converting JulianDate to Standard DateTime", end="", flush=True)
 		if (convertJulian(beginDate,endDate)):
 			print(" ..................... [SUCCESS]")
 		else:
@@ -43,19 +43,19 @@ def main():
 				if (one == 1):
 					output.write("\"%s\", "% item)
 					one = 0
-				else: 
+				else:
 					output.write(",\"%s\""% item)
 			output.write("],")
 			output.write("""
 				type: 'scatter',
 				mode: 'lines+markers',
-				marker: { 
+				marker: {
 				color: 'rgb(55,128,191)',
 				width: 6
 				},
 				connectgaps: true
 				}];
-				var layout = { 
+				var layout = {
 				title: 'Seeing (Arcsec)',
 				xaxis: {
 					title: 'Time'
@@ -83,7 +83,7 @@ def filterData(file):
 	print("Opening file", end="", flush=True)
 	pattern = "(\d{1,10}\.\d{1,10}) ; (\d{1,10}\.\d{1,10}).+;.+.+ (\d{1}\.\d{2}) ; "
 	file = open(file)
-	
+
 	with file as f:
 		for line in f:
 			regex = re.match(pattern, line)
@@ -95,12 +95,12 @@ def filterData(file):
 				continue
 
 	print(".................................................... [SUCCESS]")
-	sizeBeginDate = len(beginDate) 
+	sizeBeginDate = len(beginDate)
 	sizeEndDate   = len(endDate)
 	sizeSeeing    = len(seeing)
 
 	dateArraysComp    = sizeBeginDate == sizeEndDate
-	dateAndSeeingComp = sizeEndDate == sizeSeeing 
+	dateAndSeeingComp = sizeEndDate == sizeSeeing
 	dateAndSeeingNotNull = sizeSeeing > 1
 
 	if dateArraysComp and dateAndSeeingComp and dateAndSeeingNotNull:
